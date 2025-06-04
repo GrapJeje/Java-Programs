@@ -15,7 +15,7 @@ youngPeople.toList().forEach(System.out::println);
 ### 2. Alle namen
 ```java
 SmartList<String> names = SmartList.of(people)
-    .map(Person::getName);
+    .select(Person::getName);
 names.toList().forEach(System.out::println);
 ```
 
@@ -29,7 +29,7 @@ sortedByAge.toList().forEach(System.out::println);
 ### 4. Unieke afdelingen vinden
 ```java
 SmartList<String> departments = SmartList.of(people)
-    .map(Person::getDepartment)
+    .select(Person::getDepartment)
     .distinct();
 departments.toList().forEach(System.out::println);
 ```
